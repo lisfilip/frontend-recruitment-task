@@ -1,34 +1,46 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Filip Lis - Recruitment task</title>
-		<link rel="stylesheet" href="./src/css/main.css" type="text/css">
-
-</head>
-<body>
-
-	<div id="container">
-
-		<div id="page">
-			<div id="image"></div>
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<title>Filip Lis - Recruitment task</title>
+		<link rel="stylesheet" href="./src/css/main.css" type="text/css" />
+		<script src="src/js/main.js" defer></script>
+	</head>
+	<body>
+		<div id="container">
+			<div id="page">
+				<div id="image"></div>
 				<div id="content">
-					<div id="title"><H1>Lorem Ipsum</H1></div>
-					<div id="copy">
+					<div id="title"><h1>Lorem Ipsum</h1></div>
+					<div id="text">
 						<p>
-							Infinitely scalable, feature-rich and cloud-native data
-							management and protection for modern and legacy
-							infrastructures and SaaS platforms, managed via a
-							single app with no hardware required.
+							Infinitely scalable, feature-rich and cloud-native data management
+							and protection for modern and legacy infrastructures and SaaS
+							platforms, managed via a single app with no hardware required.
 						</p>
 					</div>
-					<div id="bottom">
+					<div>
 						<button id="button">Button</button>
 					</div>
 				</div>
+				<div id="myModal" class="modal">
+					<div class="modal-content">
+						<span class="close">&times;</span>
+						<div id="alert">Alert!</div>
+						<div id="modal-main-text">
+							<span class="counter-text">You have clicked</span>
+							<span id="counter" style="font-weight: bold"></span>
+							<span class="counter-text2"><b>times</b> to related button.</span>
+						</div>
+						<div id="reset"><button id="resetButton">Reset</button></div>
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>
-
-</body>
+	</body>
+</html>

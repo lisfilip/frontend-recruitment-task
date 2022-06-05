@@ -1,34 +1,32 @@
 const modal = document.getElementById("myModal");
 const btn = document.getElementById("button");
-const span = document.getElementsByClassName("close")[0];
+const closeButton = document.getElementsByClassName("close")[0];
 const counterDiv = document.getElementById("counter");
-const reset = document.getElementById("reset");
-const resetButton = document.getElementById("resetButton")
+const reset = document.getElementById("reset-button");
 
+btn.onclick = () => {
+	let currentValue = Number(localStorage.getItem("value"));
+	modal.style.display = "block";
+	reset.style.display = "none";
+	if (currentValue >= 4) {
+		reset.style.display = "block";
+	}
+	localStorage.setItem("value", currentValue + 1);
+	counterDiv.innerHTML = localStorage.getItem("value");
+};
 
-btn.onclick = function() {
-  let currentValue = Number(localStorage.getItem('value'));
-  modal.style.display = "block";
-  resetButton.style.display="none"
-  if (currentValue >= 4) {
-    resetButton.style.display="block"
-  }
-    let value;
-      localStorage.setItem('value', currentValue + 1);
-    counterDiv.innerHTML = localStorage.getItem('value');
-}
+reset.onclick = () => {
+	counterDiv.innerHTML = 0;
+	localStorage.setItem("value", "0");
+	reset.style.display = "none";
+};
 
-resetButton.onclick = function() {
-  counterDiv.innerHTML = 0;
-  localStorage.setItem('value', "0");
-}
+closeButton.onclick = () => {
+	modal.style.display = "none";
+};
 
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+window.onclick = (event) => {
+	if (event.target == modal) {
+		modal.style.display = "none";
+	}
+};

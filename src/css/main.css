@@ -107,10 +107,9 @@ body {
 
 #close:hover,
 #close:focus {
-	color: #444444;
+	color: #333333;
 	cursor: pointer;
 }
-
 
 .modal {
 	display: none;

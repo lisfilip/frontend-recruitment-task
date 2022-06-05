@@ -13,6 +13,7 @@ const buttonModal = () => {
 	localStorage.setItem("value", currentValue + 1);
 	counterDiv.innerHTML = localStorage.getItem("value");
 }
+
 class Button extends HTMLElement {
 	constructor() {
 		super();

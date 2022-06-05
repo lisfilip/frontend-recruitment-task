@@ -4,18 +4,11 @@ body {
 	display: flex;
 }
 
-div {
-	border-color: black;
-	border-style: solid;
-	border-width: 0px;
-}
-
 #container {
 	margin-top: 96px;
 	width: 1440px;
 	display: flex;
 	justify-content: center;
-	align-items: center;
 	min-width: 600px;
 }
 
@@ -24,7 +17,6 @@ div {
 	flex-wrap: wrap;
 	gap: 95px;
 	justify-content: center;
-	align-items: center;
 }
 
 #image {
@@ -38,8 +30,6 @@ div {
 	height: 330px;
 	display: flex;
 	flex-direction: column;
-	margin-top: 0px;
-	margin-left: 0px;
 }
 
 #title {
@@ -51,7 +41,7 @@ div {
 	align-items: center;
 }
 
-#copy {
+#text {
 	width: 380px;
 	height: 96px;
 	margin-top: 24px;
@@ -60,22 +50,13 @@ div {
 	align-items: center;
 }
 
-#button {
-	width: 128px;
-	height: 48px;
-	margin-top: 32px;
-	background: #e4c1ae;
-	border-width: 0px;
-	border-radius: 32px;
-	font-style: normal;
+#alert {
+	width: 380px;
+	height: 50px;
+	margin-left: 39px;
+	margin-top: -12px;
 	font-weight: 700;
-	font-size: 16px;
-	color: #ffffff;
-}
-
-#button:hover {
-	cursor: pointer;
-  background: #dd9d7a;
+	font-size: 42px;
 }
 
 #modal-main-text {
@@ -86,15 +67,6 @@ div {
 	font-weight: 300;
 	font-size: 16px;
 	line-height: 150%;
-}
-
-#alert {
-	width: 380px;
-	height: 50px;
-	margin-left: 39px;
-	margin-top: -12px;
-	font-weight: 700;
-	font-size: 42px;
 }
 
 #reset-button {
@@ -114,6 +86,31 @@ div {
   background: #666666
 }
 
+#modal-content {
+	background-color: #ffffff;
+	margin: 15% auto;
+	padding: 56px;
+	width: 60%;
+	height: 98px;
+}
+
+#close {
+	color: #000000;
+	font-size: 28px;
+	width: 12px;
+	height: 12px;
+	position: relative;
+	margin-top: -20px;
+	margin-right: -8px;
+	float: right;
+}
+
+#close:hover,
+#close:focus {
+	color: #444444;
+	cursor: pointer;
+}
+
 .modal {
 	display: none;
 	position: fixed;
@@ -128,28 +125,21 @@ div {
 	background-color: rgba(0, 0, 0, 0.4);
 }
 
-.modal-content {
-	background-color: #ffffff;
-	margin: 15% auto;
-	padding: 56px;
-	width: 60%;
-	height: 98px;
+.button-component {
+	width: 128px;
+	height: 48px;
+	margin-top: 32px;
+	background: #e4c1ae;
+	border-width: 0px;
+	border-radius: 32px;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	color: #ffffff;
 }
 
-.close {
-	color: #000000;
-	font-size: 28px;
-	width: 12px;
-	height: 12px;
-	position: relative;
-	margin-top: -20px;
-	margin-right: -8px;
-	float: right;
-}
-
-.close:hover,
-.close:focus {
-	color: black;
-	text-decoration: none;
+.button-component:hover,
+.button-component:focus {
 	cursor: pointer;
+  background: #dd9d7a;
 }

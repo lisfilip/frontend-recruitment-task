@@ -2,6 +2,7 @@ body {
 	background-color: white;
 	font-family: "Roboto", sans-serif;
 	display: flex;
+	justify-content: center;
 }
 
 #container {
@@ -20,34 +21,50 @@ body {
 
 #image {
 	width: 505px;
-  border-width: 1px;
-  border-style: solid;
+	border-width: 1px;
+	border-style: solid;
 	height: 330px;
 	/* background: url("../../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_16_9,c_fill,g_auto__c_scale,w_596.jpg"); */
 }
 
-@media (max-width: 400px) {
-  #image {
-    width:100%;
-  }
-  #page {
-    gap: 0px;
-  }
-  #content {
-    width: 100%;
-  }
-  #modal-content {
-    padding: 20px;
-  }
+@media screen and (max-width: 500px) {
+	#container {
+		margin-top: 10px;
+	}
+	#image {
+		width: 90%;
+	}
+	#page {
+		gap: 0px;
+	}
+	#content {
+		width: 100%;
+		height: auto;
+	}
+	#modal-main-text {
+		width: 50px;
+	}
+	/* #modal-content {
+		padding: 0px;
+	  width: 90%;
+    margin-left: 5px;
+    margin-right: 5px;
+	}  */
+	/* #alert,
+	#modal-main-text,
+	#reset-button {
+		margin-left: auto;
+    margin-right: auto;
+		width: 200px;
+	} */
 }
-
-
 
 #content {
 	width: 380px;
 	height: 330px;
 	display: flex;
 	flex-direction: column;
+  border: 1px, solid, black;
 }
 
 #title {
@@ -71,7 +88,6 @@ body {
 #alert {
 	width: 380px;
 	height: 50px;
-	margin-left: 39px;
 	margin-top: -12px;
 	font-weight: 700;
 	font-size: 42px;
@@ -80,7 +96,6 @@ body {
 #modal-main-text {
 	width: 380px;
 	height: 24px;
-	margin-left: 39px;
 	margin-top: 30px;
 	font-weight: 300;
 	font-size: 16px;
@@ -101,14 +116,18 @@ body {
 
 #reset-button:hover {
 	cursor: pointer;
-  background: #666666
+	background: #666666;
 }
 
 #modal-content {
 	background-color: #ffffff;
-	margin: 15% auto;
-	padding: 56px;
-	width: 618px;
+	margin-top: 15%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 95px;
+	padding-top: 56px;
+	padding-bottom: 56px;
+	width: 60%;
 	height: 98px;
 }
 
@@ -159,5 +178,5 @@ body {
 .button-component:hover,
 .button-component:focus {
 	cursor: pointer;
-  background: #dd9d7a;
+	background: #dd9d7a;
 }

@@ -21,43 +21,11 @@ body {
 #image {
 	width: 505px;
 	height: 330px;
-	background: url("../../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_ar_16_9,c_fill,g_auto__c_scale,w_596.jpg");
 }
 
-@media (max-width: 500px) {
-  #container {
-    margin-top: 10px;
-  }
-  #image {
-    width:90%;
-  }
-  #page {
-    gap: 0px;
-  }
-  #text {
-    width: 90%;
-  }
-  #content {
-    width: 90%;
-    align-items: center;
-  }
-  #title {
-    display: flex;
-    justify-content: center;
-  }
-  #modal-content {
-    max-width: 100%;
-   }
-  #alert {
-    width: 200px;
-    margin-left: -70px;
-  }
-  #modal-main-text {
-    margin-left: -70px;
-  }
+#sunrise {
+	width: 100%;
 }
-
-
 
 #content {
 	width: 380px;
@@ -175,4 +143,38 @@ body {
 .button-component:focus {
 	cursor: pointer;
   background: #dd9d7a;
+}
+
+@media (max-width: 500px) {
+  #container {
+    margin-top: 10px;
+  }
+  #image {
+    width:90%;
+		height: auto;
+  }
+  #page {
+    gap: 0px;
+  }
+  #text {
+    width: 90%;
+  }
+  #content {
+    width: 90%;
+    align-items: center;
+  }
+  #title {
+    display: flex;
+    justify-content: center;
+  }
+  #modal-content {
+    width: 55%;
+   }
+  #alert {
+    width: 200px;
+    margin-left: -70px;
+  }
+  #modal-main-text {
+    margin-left: -70px;
+  }
 }

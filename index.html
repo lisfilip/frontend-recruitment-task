@@ -15,12 +15,14 @@
 		<div id="container">
 			<div id="page">
 				<div id="image">
-					<img id="sunrise"
+					<img
+						id="sunrise"
 						srcset="
 							./images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_480.jpg,
 							./images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1002.jpg 1.5x,
-							./images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg 2x"					
-
+							./images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg 2x
+						"
+						src="./images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg"
 						alt="Sunrise over the beach"
 					/>
 				</div>
@@ -42,10 +44,13 @@
 						<span id="close">&times;</span>
 						<div id="alert">Alert!</div>
 						<div id="modal-main-text">
-							<span>You have clicked</span>
+							<p>You have clicked <span id="counter" style="font-weight: bold"></span> <b>times</b> to related button.</span></p>
+							<span><button id="reset-button">Reset</button>
+							
+							<!-- <span>You have clicked&nbsp;</span>
 							<span id="counter" style="font-weight: bold"></span>
-							<span><b>times</b> to related button.</span>
-							<span><button id="reset-button">Reset</button></span>
+							<span><b>&nbsp;times</b> to related button.</span>
+							<span><button id="reset-button">Reset</button></span> -->
 						</div>
 					</div>
 				</div>

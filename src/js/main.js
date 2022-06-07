@@ -3,40 +3,54 @@ const closeButton = document.getElementById("close");
 const counterDiv = document.getElementById("counter");
 const reset = document.getElementById("reset-button");
 
-const buttonModal = () => {
-  let currentValue = Number(localStorage.getItem("value"));
-	modal.style.display = "block";
+const COUNTER_KEY = "counter_key";
+
+const openModal = () => {
+	modal.style.display = "flex";
+};
+const hideModal = () => {
+	modal.style.display = "none";
+};
+const showResetButton = () => {
+	reset.style.display = "block";
+};
+const hideResetButton = () => {
 	reset.style.display = "none";
-	if (currentValue >= 4) {
-		reset.style.display = "block";
-	}
-	localStorage.setItem("value", currentValue + 1);
-	counterDiv.innerHTML = localStorage.getItem("value");
-}
-class Button extends HTMLElement {
+};
+
+const onOpenModalButtonClick = () => {
+	const currentValue = Number(localStorage.getItem(COUNTER_KEY));
+	const newValue = currentValue + 1;
+	openModal();
+	newValue >= 5 ? showResetButton() : hideResetButton();
+	localStorage.setItem(COUNTER_KEY, newValue);
+	counterDiv.innerHTML = newValue;
+};
+class OpenModalButton extends HTMLElement {
 	constructor() {
 		super();
 	}
 	connectedCallback() {
 		this.innerHTML = `
-    <button onClick="buttonModal()" class="button-component">Button</button>`;
+    <button onClick="onOpenModalButtonClick()" class="button-component">Button</button>
+		`;
 	}
 }
 
 reset.onclick = () => {
 	counterDiv.innerHTML = 0;
-	localStorage.setItem("value", "0");
-	reset.style.display = "none";
+	localStorage.setItem(COUNTER_KEY, "0");
+	hideResetButton();
 };
 
 closeButton.onclick = () => {
-	modal.style.display = "none";
+	hideModal();
 };
 
 window.onclick = (event) => {
 	if (event.target == modal) {
-		modal.style.display = "none";
+		hideModal();
 	}
 };
 
-customElements.define("button-component", Button);
+customElements.define("button-component", OpenModalButton);

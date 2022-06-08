@@ -136,6 +136,10 @@ body {
 	cursor: pointer;
 }
 
+#counter {
+	font-weight: bold;
+}
+
 @media (max-width: 500px) {
 	.container {
 		margin-top: 2px;
@@ -151,7 +155,7 @@ body {
 		height: auto;
 	}
 	.page {
-		gap: 0px;
+		gap: 0;
 	}
 	.content {
 		width: 90%;
